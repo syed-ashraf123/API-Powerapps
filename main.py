@@ -5,8 +5,8 @@ app=Flask(__name__)
 def profile1():
 	return "OK Request coming"
 
-app.route("https://requestingapps.herokuapp.com/<variable>")
-def profile2(variable):
+@app.route('/<variable>')
+def profile(variable):
 	return variable
 
 
